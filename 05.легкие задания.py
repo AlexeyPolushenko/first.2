@@ -1463,22 +1463,22 @@ from pickletools import string1
 #     print(0)
 
 #139
-n = int(input())
-s = []
-
-d1 = []
-d2 = []
-
-for i in range(n):
-    c = list(map(int, input().split()))
-    s.append(c)
-
-for i in range(n):
-    d1.append(s[i][i])
-    d2.append(s[i][n - 1 - i])
-
-print(*d1)
-print(*d2)
+# n = int(input())
+# s = []
+#
+# d1 = []
+# d2 = []
+#
+# for i in range(n):
+#     c = list(map(int, input().split()))
+#     s.append(c)
+#
+# for i in range(n):
+#     d1.append(s[i][i])
+#     d2.append(s[i][n - 1 - i])
+#
+# print(*d1)
+# print(*d2)
 
 
 
