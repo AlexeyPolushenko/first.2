@@ -1,6 +1,7 @@
 #1
 #n = int(input())
 # print(n + 1)
+from pickletools import string1
 
 #2
 # n = int(input())
@@ -1435,36 +1436,49 @@
 #     print(f)
 
 #138
-n, m = map(int, input().split())
+# n, m = map(int, input().split())
+# s = []
+# summ1 = 0
+# summ2 = 0
+#
+# for i in range(n):
+#     c = list(map(int, input().split()))
+#     s.append(c)
+#
+# for i in range(n//2):
+#     for j in range(m):
+#         summ1 += s[i][j]
+#
+# for i in range(n//2, n):
+#     for j in range(m):
+#         summ2 += s[i][j]
+#
+# if summ1 > summ2:
+#     print(1)
+#
+# elif summ1 < summ2:
+#     print(2)
+#
+# else:
+#     print(0)
+
+#139
+n = int(input())
 s = []
-summ1 = 0
-summ2 = 0
+
+d1 = []
+d2 = []
 
 for i in range(n):
     c = list(map(int, input().split()))
     s.append(c)
 
-for i in range(n//2):
-    for j in range(m):
-        summ1 += s[i][j]
+for i in range(n):
+    d1.append(s[i][i])
+    d2.append(s[i][n - 1 - i])
 
-for i in range(n//2, n):
-    for j in range(m):
-        summ2 += s[i][j]
-
-if summ1 > summ2:
-    print(1)
-
-elif summ1 < summ2:
-    print(2)
-
-else:
-    print(0)
-
-
-
-
-
+print(*d1)
+print(*d2)
 
 
 
