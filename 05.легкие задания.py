@@ -1480,6 +1480,140 @@ from pickletools import string1
 # print(*d1)
 # print(*d2)
 
+#140
+# n  = int(input())
+# s = []
+# d1 = 0
+# d2 = 0
+#
+# for i in range(n):
+#     c = list(map(int, input().split()))
+#     s.append(c)
+#
+# for i in range(n):
+#     d1 += s[i][i]
+#     d2 += s[i][n - 1 - i]
+#
+# if d1 > d2:
+#     print("main")
+#
+# elif d1 < d2:
+#     print("side")
+#
+# else:
+#     print("equal")
+
+#141
+# n, m = map(int, input().split())
+# s = []
+#
+# num1 = 0
+# num2 = 0
+#
+# for i in range(n):
+#     c = list(map(str, input().split()))
+#     s.append(c)
+#
+# summ = 0
+# summdo = 0
+# num = 0
+#
+# for _ in range(2):
+#     for i in range(n):
+#         summ = 0
+#         for j in range(m):
+#             if s[i][j] == "a":
+#                 summ += 1
+#             num = i
+#         if summ <= summdo:
+#             summdo = summ
+#         else:
+#             num = i - 1
+#     s.pop(num)
+#     if _ == 1:
+#         num2 = num + 1
+#     else:
+#         n -= 1
+#         num1 = num + 1
+#
+# if num1 >= num2:
+#     print(num2, num1)
+# else:
+#     print(num1, num2)
+
+#142
+# n, m = map(int, input().split())
+# s = []
+# summK = 0
+#
+# for i in range(n):
+#     c = list(map(str, input().split()))
+#     summK += c.count("K")
+#     s.append(c)
+#
+# for i in range(1, n-1):
+#     for j in range(1, m-1):
+#         if s[i][j] == "K":
+#             summL = 0
+#             for a in range(i-1, i+2):
+#                 for g in range(j-1, j+2):
+#                     if s[a][g] == "L":
+#                         summL += 1
+#             if summL == 8:
+#                 summK -= 1
+#
+# print(summK)
+
+#143
+# n = int(input())
+# s = []
+#
+# for i in range(n):
+#     c = list(map(int, input().split()))
+#     s.append(c)
+#
+# for j in range(n):
+#     max_a = 0
+#     for i in range(n):
+#         if max_a < s[i][j]:
+#             max_a = s[i][j]
+#     print(max_a, end=" ")
+
+#144
+# n = int(input())
+# s = []
+# sum_d = 0
+#
+# for i in range(n):
+#     c = list(map(int, input().split()))
+#     s.append(c)
+#
+# for i in range(n):
+#     sum_d += s[i][i] + s[n-i-1][i]
+#
+# if n % 2 == 1:
+#     sum_d -= s[n//2][n//2]
+#
+# print(sum_d)
+
+#145
+# n, m = map(int, input().split())
+# s = []
+# sum_s = 0
+#
+# for i in range(n):
+#     c = input().split()
+#     s.append(c)
+#
+# for i in range(n):
+#     f = 0
+#     for j in range(m//2):
+#         if s[i][j] == s[i][m-1-j]:
+#             f += 1
+#     if f == m//2:
+#         sum_s += 1
+# print(sum_s)
+
 
 
 
