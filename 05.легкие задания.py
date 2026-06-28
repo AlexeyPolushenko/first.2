@@ -1614,6 +1614,106 @@ from pickletools import string1
 #         sum_s += 1
 # print(sum_s)
 
+#146
+# n, m = map(int, input().split())
+# s = []
+# summ0 = 0
+#
+# for i in range(n):
+#     c = list(map(int, input().split()))
+#     s.append(c)
+#
+# for i in range(n):
+#     for j in range(m):
+#         if s[i][j] == 0:
+#             for a in range(i-1, i+2):
+#                 for g in range(j-1, j+2):
+#                     if 0 <= a < n and 0 <= g < m:
+#                         summ0 += s[a][g]
+#
+# print(summ0)
+
+#147
+# n = int(input())
+# s = []
+# result = 0
+#
+# for i in range(n):
+#     c = list(map(int, input().split()))
+#     s.append(c)
+#
+# for i in range(n//2):
+#     if s[i][i] == s[n-1-i][n-1-i]:
+#         result += 1
+#
+# if result == n//2:
+#     print('YES')
+# else:
+#     print('NO')
+
+#148
+# n = 64
+# s = []
+# empty = 0
+#
+# for i in range(n//8):
+#     c = list(map(int, input().split()))
+#     s.append(c)
+#
+# for i in range(n//8):
+#     for j in range(n//8):
+#         if s[i][j] == 1:
+#             for a in range(n//8):
+#                 if s[a][j] != 1:
+#                     s[a][j] = 2
+#             for b in range(n//8):
+#                 if s[i][b] != 1:
+#                     s[i][b] = 2
+#
+# for i in range(n//8):
+#     for j in range(n//8):
+#         if s[i][j] == 0:
+#             empty += 1
+#
+# print(empty)
+
+#149
+# n, m = map(int, input().split())
+# s = []
+#
+# for i in range(n):
+#     c = list(map(int, input().split()))
+#     s.append(c)
+#
+# for i in range(n):
+#     summS = 0
+#     for j in range(m):
+#         summS += s[i][j]
+#     print(summS, end=" ")
+
+#150
+# n, m = map(int, input().split())
+# s = []
+# summ = 0
+#
+# for i in range(n):
+#     c = list(map(int, input().split()))
+#     s.append(c)
+#
+# for i in range(m):
+#     summ += s[0][i] + s[n-1][i]
+#     s[0][i] = 0
+#     s[n - 1][i] = 0
+#
+# for i in range(n):
+#     summ += s[i][0] + s[i][m-1]
+#
+# print(summ)
+
+
+
+
+
 
 
 
